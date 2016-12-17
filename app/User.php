@@ -26,4 +26,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    //un usuario a creado muchos terceros
+    public function terceros(){
+        return $this->hasMany(Tercero::class);
+    }
 }
